@@ -21,7 +21,7 @@ cat /proc/<PID>/status                  get the PID status <br/>
 
 # USAGE
 To install :- <br/>
-git clone https://github.com/ArcadeusOPS/MalScan.git <br/>
+git clone https://github.com/DavaoSecurity/MalScan.git <br/>
 <br/>
 To start malware scanning  <br/>
 ./malscan.sh <br/>
