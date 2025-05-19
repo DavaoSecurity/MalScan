@@ -34,7 +34,7 @@ Copyright (c) ArcadeusOPS
 Collate Reports into a single JSON or HTML document. Suggestions to info@arcadeusops.com.
 
 # Bugs
-Send issues to info@arcadeusops.com stating nature of issue. A screenshot will help too. Thanks.
+Send issues to info@davaosecurity.com stating nature of issue. A screenshot will help too. Thanks.
 
 # CPD
 Part of EC-Council ECE/CPD Credits
