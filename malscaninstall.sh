@@ -6,14 +6,9 @@ HOME=/
 SHELL=/bin/bash
 # install SMTP mail
 sudo update
-sudo apt install mailutils ssmtp epel-release clamd clamav clamav-daemon -y
+sudo apt install epel-release clamd clamav clamav-daemon -y
 # nano /etc/ssmtp/ssmtp.conf and reconfig email addresses to your Gmail SMTP/POP accounts
-echo " "
-echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in this file, malscaninstall.sh "
-echo " This script will install and also run the malware scans. The instructions are in the comments. "
-echo " You need to specify your Gmail credentials to allow SMTP traffic. Also run the GUI unhide, which is part of Kali Linux. "
-echo " "
-read -p " What email do you want the results to be sent to ? " umail
+
 # lynis
 cd /opt/
 wget https://downloads.cisofy.com/lynis/lynis-2.6.6.tar.gz
@@ -60,7 +55,4 @@ rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 #
 # process txt files
 cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
-sed -i -e '1iCOMBINED MALWARE REPORT Lynis chkrootkit rkhunter ClamAV LMD\' malrep.txt
-sed -i -e '2i****************************************************************\' malrep.txt
-# mail
-mail -s "Malware Report" $umail -a malrep.txt
+echo "Look at malrep.txt for results."

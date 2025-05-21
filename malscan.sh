@@ -4,14 +4,6 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 HOME=/
 SHELL=/bin/bash
-echo " "
-echo " Make sure you have setup your outgoing SMTP mail server as per the instructions in malscaninstall.sh "
-echo " This script will run the malware scans only. Also runs the GUI unhide, which is part of Kali Linux. "
-echo " This script assumes you've got all the dependancies installed from malinstall.sh. "
-echo " You need to specify your Gmail credentials to allow SMTP traffic when you run malscaninstall.sh. "
-echo " "
-read -p " What email do you want the results to be sent to ? " umail
-echo " "
 
 # investigation
 netstat -nalp                            # for unusual processes and open ports
@@ -55,9 +47,5 @@ rm -rf /usr/local/maldetect/quarantine/* # remove quarantined files
 # set crontab -e
 #
 # process txt files
-cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep.txt
-sed -i -e '1iCOMBINED MALWARE REPORT Lynis chkrootkit rkhunter ClamAV LMD\' malrep.txt
-sed -i -e '2i****************************************************************\' malrep.txt
-# mail
-# mail
-mail -s "Malware Report" $umail -a malrep.txt
+cat lynis.txt clamav.txt rootkit.txt rkhunt.txt lmd.txt | sort > malrep1.txt
+echo "Look at malrep1.txt fro results "
