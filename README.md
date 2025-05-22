@@ -1,6 +1,6 @@
 # MalScan
  Quickly and effectively detect malware on a Linux machine using chkrootkit, rkhunter, LMD, Lynis and ClamAV. <br/>
- Tested on Debian. For otehr flavours scheck the installed repos and change APT to YUM, for example. <br/>
+ Tested on Debian. For other flavours scheck the installed repos and change APT to YUM, for example. <br/>
  This is not a definitive scan but will give you a general snapshot. Run full scans as per your Policy. <br/>
  Sends a Combined Malware Report to a single, user defined email. Scans entire drive so can take a long time! <br/>
  BASH scripts written by Nathan Jones nat@davaosecurity.com as part of on-prem Ubuntu server setups. <br/>
@@ -28,7 +28,7 @@ To start malware scanning  <br/>
 
 # License
 MIT License
-Copyright (c) ArcadeusOPS
+Copyright (c) DavaoSecurity
 
 # TODO
 Collate Reports into a single JSON or HTML document. Suggestions to info@arcadeusops.com.
@@ -37,4 +37,4 @@ Collate Reports into a single JSON or HTML document. Suggestions to info@arcadeu
 Send issues to info@davaosecurity.com stating nature of issue. A screenshot will help too. Thanks.
 
 # CPD
-Part of EC-Council ECE/CPD Credits
+Part of ECE/CPD Credits
